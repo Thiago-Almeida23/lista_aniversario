@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="lib/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-md-9">
+                <h1 class="text-center">Lista de Aniversariantes</h1>
+            </div>
+            <div class="col-sm-3 d-flex justify-content-end">
+                <div class="btn-group">
+                    <button class="btn btn-primary">
+                        Menu
+                    </button>
+                    <button class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown"></button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li class="dropdown-item">
+                            <a href="#" id="cadastroLink">Cadastrar novo aniversariante</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="#" id="verPorMesLink">Ver por mês</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="#" id="verTodosMesesLink">Ver todos os meses</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4" id="cadastroContainer" style="display: none;">
+            <div class="col-md-6 offset-md-3">
+                <form id="novoAniversarianteForm">
+                    <div class="mb-3">
+                        <label for="nome" class="form-label">Nome:</label>
+                        <input type="text" class="form-control custom-input" id="nome" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="dataNascimento" class="form-label">Data de Nascimento:</label>
+                        <input type="date" class="form-control custom-input" id="dataNascimento" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Cadastrar</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="row mt-4" id="mesesContainer" style="display: none;">
+            <div class="col-md-6 offset-md-3">
+                <select class="form-select custom-input" id="selectMeses">
+                    <option value="">Selecione um mês</option>
+                    <option value="1">Janeiro</option>
+                    <option value="2">Fevereiro</option>
+                    <option value="3">Março</option>
+                    <option value="4">Abril</option>
+                    <option value="5">Maio</option>
+                    <option value="6">Junho</option>
+                    <option value="7">Julho</option>
+                    <option value="8">Agosto</option>
+                    <option value="9">Setembro</option>
+                    <option value="10">Outubro</option>
+                    <option value="11">Novembro</option>
+                    <option value="12">Dezembro</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row mt-4" id="gridMesesContainer" style="display: none;"> <!-- Grid para todos os meses -->
+            <div class="col-md-12">
+                <div class="row row-cols-md-4" id="gridMeses">
+                    <!-- Aqui serão inseridos os cards de cada mês -->
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4" id="aniversariantesCardContainer" style="display: none;">
+            <div class="col-md-6 offset-md-3">
+                <div class="card">
+                    <div class="card-header" id="mesAniversariantesHeader">Mês de Aniversariantes</div>
+                    <ul class="list-group list-group-flush" id="aniversariantesLista">
+                        <!-- Aqui serão exibidos os aniversariantes do mês selecionado -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer fixed-bottom bg-primary text-white text-center py-3">
+        Desenvolvido por: Thiago Almeida
+    </footer>
+    
+    <script src="lib/bootstrap.bundle.min.js"></script>
+    <script src="lib/script.js"></script>
+</body>
+</html>
