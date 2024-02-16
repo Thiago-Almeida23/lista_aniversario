@@ -1,0 +1,81 @@
+.custom-input {
+    width: 150px;
+}
+
+#selectMeses {
+    width: 180px;
+}
+
+#aniversariantesCardContainer .card {
+    margin-top: 20px;
+    width: 200px;
+}
+
+.card-header {
+    text-align: center;
+}
+
+#gridMesesContainer {
+    width: 100%;
+    overflow-y: auto;
+}
+
+#gridMesesContainer .card {
+    width: calc(25% - 20px);
+    margin: 10px;
+    float: left;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    text-align: center;
+    height: 150px;
+    overflow: auto;
+}
+
+@media only screen and (min-width: 992px) {
+    #gridMesesContainer .card {
+        width: calc(25% - 20px);
+        margin: 10px;
+        float: left;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    #gridMesesContainer .card {
+        width: calc(33.33% - 20px);
+        margin: 10px;
+        float: left;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    #gridMesesContainer .card {
+        width: calc(50% - 20px);
+        margin: 10px;
+        float: left;
+    }
+}
+
+@media (max-width: 768px) {
+  .mt-sm-5 {
+    margin-top: 3rem !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .mt-md-5 {
+    margin-top: 3rem !important;
+  }
+}
+
+@media (max-width: 375px) {
+  .mt-lg-5 {
+    margin-top: 3rem !important;
+  }
+}
+
+@media (max-width: 320px) {
+  .mt-xl-5 {
+    margin-top: 3rem !important;
+  }
+}
